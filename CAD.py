@@ -54,7 +54,7 @@ for r in range(numberOfrows):
         coutnNonZero += (matrixA[r][c] != 0)
     if(coutnNonZero > ma):
         ma = coutnNonZero
-        maxRow = r  # --> node which has the greater number of branches in
+        maxRow = r  # --> node which has the greatest number of branches in
 
 # Tree Branches
 ones = 0
