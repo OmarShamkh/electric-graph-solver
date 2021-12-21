@@ -7,8 +7,8 @@ numberOfcols = int(input("Enter number of columns : "))
 print("Enter Incidence matrix A:")
 matrixA = []
 for r in range(numberOfrows):
-    col = list(map(int, input().split()))
-    matrixA.append(col)
+    row = list(map(int, input().split()))
+    matrixA.append(row)
 
 # Check if need extra row
 flag = 0
@@ -54,7 +54,7 @@ for r in range(numberOfrows):
         coutnNonZero += (matrixA[r][c] != 0)
     if(coutnNonZero > ma):
         ma = coutnNonZero
-        maxRow = r  # --> node which has the greatest number of branches in
+        maxRow = r  # --> node which has the greatest number of branches -->in/out
 
 # Tree Branches
 ones = 0
@@ -98,8 +98,9 @@ for i in range(numberOfrows):
 AT = np.array(matrixAT)
 InvOfAT = np.linalg.inv(AT)
 
-t1 = np.shape(InvOfAT)
-t2 = np.shape(matrixAL)
+# t1 = np.shape(InvOfAT)
+# t2 = np.shape(matrixAL)
+
 # calculate matrix C link CL = AT^-1 * AL
 matrixCL = np.dot(InvOfAT, matrixAL)
 
